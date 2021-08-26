@@ -1,0 +1,30 @@
+<div>
+    <mat-card>
+        <mat-card-title>Registrar Curso</mat-card-title>
+
+        <mat-card-content>
+            <form>
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput placeholder="P. ej. 10" value="10">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Grupo</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let group of groups" [value]="group">
+                            {{ group }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Cantidad máxima de estudiantes</mat-label>
+                    <input matInput placeholder="P. ej. 30" value="30" type="number">
+                </mat-form-field>
+
+                <button type="submit" mat-raised-button color="primary"> Guardar </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

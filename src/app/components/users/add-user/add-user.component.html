@@ -1,0 +1,35 @@
+<div>
+    <mat-card>
+        <mat-card-title>Registrar usuario</mat-card-title>
+
+        <mat-card-content>
+            <form>
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Nombres Completos</mat-label>
+                    <input matInput placeholder="P. ej. Juan" value="Miguel">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Correo Electrónico</mat-label>
+                    <input matInput placeholder="P. ej. juan@gmail.com" value="mail@example.com">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput placeholder="**********" value="">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Rol</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let role of roles" [value]="role.id">
+                            {{role.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button type="submit" mat-raised-button color="primary"> Guardar </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
